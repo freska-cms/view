@@ -64,7 +64,7 @@ func DateField(label string, name string, t time.Time, args ...string) got.HTML 
 	if len(args) > 0 {
 		attributes = strings.Join(args, " ")
 	}
-	output := fmt.Sprintf(tmpl, Escape(label), Escape(name), Escape(name), Date(t), Date(t, "2006-01-02"), attributes)
+	output := fmt.Sprintf(tmpl, Escape(label), Escape(name), Escape(name), Date(t), Date(t, "2018-01-02"), attributes)
 
 	return got.HTML(output)
 }

@@ -104,7 +104,7 @@ func Exists(s string) bool {
 
 // Time returns a formatted time string given a time and optional format
 func Time(time time.Time, formats ...string) got.HTML {
-	layout := "Jan 2, 2006 at 15:04"
+	layout := "Jan 2, 2018 at 15:04"
 	if len(formats) > 0 {
 		layout = formats[0]
 	}
@@ -113,11 +113,11 @@ func Time(time time.Time, formats ...string) got.HTML {
 }
 
 // Date returns a formatted date string given a time and optional format
-// Date format layouts are for the date 2006-01-02
+// Date format layouts are for the date 2018-01-02
 func Date(t time.Time, formats ...string) got.HTML {
 
-	//layout := "2006-01-02" // Jan 2, 2006
-	layout := "Jan 2, 2006"
+	//layout := "2018-01-02" // Jan 2, 2018
+	layout := "Jan 2, 2018"
 	if len(formats) > 0 {
 		layout = formats[0]
 	}
@@ -125,19 +125,19 @@ func Date(t time.Time, formats ...string) got.HTML {
 	return got.HTML(Escape(value))
 }
 
-// UTCDate returns a formatted date string in 2006-01-02
+// UTCDate returns a formatted date string in 2018-01-02
 func UTCDate(t time.Time) got.HTML {
-	return Date(t.UTC(), "2006-01-02")
+	return Date(t.UTC(), "2018-01-02")
 }
 
-// UTCTime returns a formatted date string in 2006-01-02
+// UTCTime returns a formatted date string in 2018-01-02
 func UTCTime(t time.Time) got.HTML {
-	return Time(t.UTC(), "2006-01-02T15:04:00:00.000Z")
+	return Time(t.UTC(), "2018-01-02T15:04:00:00.000Z")
 }
 
-// UTCNow returns a formatted date string in 2006-01-02
+// UTCNow returns a formatted date string in 2018-01-02
 func UTCNow() got.HTML {
-	return Date(time.Now(), "2006-01-02")
+	return Date(time.Now(), "2018-01-02")
 }
 
 // Truncate text to a given length
